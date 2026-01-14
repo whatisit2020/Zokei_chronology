@@ -1,0 +1,122 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-padding-top: 10dvh;
+    font-size: 62.5%;
+    font-optical-sizing: auto;
+    line-break: strict;
+    font-feature-settings: "palt";
+    background-color: var(--color-yellow);
+}
+
+::selection {
+    background-color: rgb(66, 66, 66);
+    color: var(--color-white);
+}
+
+img,
+picture {
+    display: block;
+    width: 100%;
+    object-fit: contain;
+}
+
+:root {
+    --jp-font: "Inter", "Noto Sans JP", sans-serif;
+    --number-font: 'Erbar W01 DemiBold';
+    --color-black: #231815;
+    --color-white: #fff;
+    --font-size-L: 40px;
+    --font-size-M: 36px;
+    --font-size-R: 22px;
+}
+
+@media only screen and (max-width: 1279px) {
+
+    :root {
+        --font-size-L: 28px;
+        --font-size-M: 20px;
+        --font-size-R: 18px;
+    }
+}
+
+@media (max-aspect-ratio: 9 / 16) and (orientation: portrait) {
+    :root {
+        --font-size-L: 78px;
+        --font-size-M: 44px;
+        --font-size-R: 22px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    :root {
+        --font-size-L: 24px;
+        --font-size-M: 16px;
+        --font-size-R: 12.6px;
+    }
+}
+
+li {
+    list-style: none
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+span,
+li,
+dt,
+dd {
+    color: var(--color-black);
+    font-style: normal;
+    font-optical-sizing: auto;
+    font-feature-settings: "palt" on;
+    line-break: strict;
+    overflow-wrap: anywhere;
+}
+
+.pc-content {
+    display: block;
+}
+
+.sp-content {
+    display: none;
+}
+
+
+
+/* タブレット */
+@media only screen and (max-width: 1279px) {
+
+    .pc-content {
+        display: none;
+    }
+
+    .sp-content {
+        display: block;
+    }
+}
+
+@media (max-aspect-ratio: 9 / 16) and (orientation: portrait) {
+
+    .pc-content {
+        display: none;
+    }
+
+    .sp-content {
+        display: block;
+    }
+}
